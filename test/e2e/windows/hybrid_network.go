@@ -83,8 +83,8 @@ var _ = SIGDescribe("Hybrid cluster network", func() {
 
 			ginkgo.By("verifying pod external connectivity to the internet")
 
-			ginkgo.By("checking connectivity to 8.8.8.8 53 (google.com) from Linux")
-			assertConsistentConnectivity(ctx, f, linuxPod.ObjectMeta.Name, linuxOS, linuxCheck("8.8.8.8", 53))
+			ginkgo.By("checking connectivity to 8.8.8.8 853 (google.com) from Linux")
+			assertConsistentConnectivity(ctx, f, linuxPod.ObjectMeta.Name, linuxOS, linuxCheck("8.8.8.8", 853))
 		})
 
 		ginkgo.It("should provide Internet connection for Windows containers using DNS [Feature:Networking-DNS]", func(ctx context.Context) {
